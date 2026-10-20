@@ -1,2 +1,5 @@
 # Local editor / tool config
 .claude/
+
+# Org profile build workspace (pushed separately to ViscovaAI/.github-private)
+org-profile/
