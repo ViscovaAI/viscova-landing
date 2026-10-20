@@ -1,0 +1,117 @@
+/* Hallmark · tokens · theme: custom · vibe: "navy instrument panel, burnt-orange signal, quiet luxury"
+ * Palette lifted from the VISCOVA trifold brochure:
+ *   navy #1C2333 / #252E44 · burnt orange #BF591D · cream #F5F1EC · slate #AEB2C2 · sage #7A9B76
+ * axes: dark / geometric-sans (extended) / warm
+ */
+
+:root {
+  /* ---------- raw brand palette (OKLCH) ---------- */
+  --navy-900: oklch(15.5% 0.028 265);
+  --navy-800: oklch(17.5% 0.030 265);
+  --navy-700: oklch(22.5% 0.033 265);   /* brochure #1C2333 */
+  --navy-600: oklch(27% 0.037 266);     /* brochure #252E44 */
+  --navy-500: oklch(32% 0.032 266);
+  --navy-400: oklch(38% 0.030 266);
+  --slate-300: oklch(64% 0.022 268);
+  --slate-200: oklch(78% 0.020 270);    /* brochure #AEB2C2 */
+  --cream-100: oklch(95.5% 0.008 70);   /* brochure #F5F1EC */
+  --cream-200: oklch(91.5% 0.011 70);
+  --cream-300: oklch(84% 0.013 70);
+  --ink-on-cream-2: oklch(42% 0.028 265);
+  --orange-600: oklch(52% 0.150 45);    /* text-safe orange on cream */
+  --orange-500: oklch(58% 0.155 45);    /* brochure #BF591D */
+  --orange-300: oklch(73% 0.130 48);    /* brochure #E08A63 — text-safe orange on navy */
+  --orange-focus: oklch(74% 0.170 50);
+  --sage-400: oklch(66% 0.075 140);     /* brochure #7A9B76 — "verified" */
+
+  /* ---------- semantic colour (dark surface default) ---------- */
+  --color-paper:       var(--navy-800);
+  --color-paper-2:     var(--navy-700);
+  --color-paper-3:     var(--navy-600);
+  --color-ink:         var(--cream-100);
+  --color-ink-2:       var(--slate-200);
+  --color-muted:       var(--slate-300);
+  --color-rule:        var(--navy-500);
+  --color-rule-2:      var(--navy-600);
+  --color-rule-strong: var(--navy-400);
+  --color-accent:      var(--orange-500);
+  --color-accent-text: var(--orange-300);
+  --color-signal:      var(--sage-400);
+  --color-focus:       var(--orange-focus);
+  --color-on-solid:    var(--navy-800);
+  --color-mask:       oklch(100% 0 0); /* SVG mask channel only — never painted */
+  --color-scrim:       oklch(15.5% 0.028 265 / 0.72);
+  --shadow-float:      0 14px 36px -18px oklch(8% 0.03 265 / 0.7);
+
+  /* ---------- type ---------- */
+  --font-display: "Unbounded", "Geist", ui-sans-serif, sans-serif;
+  --font-body:    "Geist", ui-sans-serif, sans-serif;
+  --font-mono:    "Geist Mono", ui-monospace, monospace;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-md:   1.25rem;
+  --text-lede: clamp(1.0625rem, 0.6vw + 0.95rem, 1.25rem);
+  --text-lg:   1.5625rem;
+  --text-xl:   clamp(1.6rem, 1.6vw + 1rem, 2.4rem);
+  --text-display: clamp(2.1rem, 4.4vw + 1rem, 4.75rem);
+  --text-statement: clamp(1.6rem, 3.6vw + 0.6rem, 3.25rem);
+
+  --weight-display: 200;
+  --weight-display-strong: 600;
+  --weight-body: 380;
+  --weight-strong: 560;
+
+  /* ---------- space (4pt) ---------- */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+  --page-gutter: clamp(1rem, 4vw, 4rem);
+  --page-max: 82rem;
+
+  /* ---------- rules, radii ---------- */
+  --rule-hair: 1px;
+  --rule-strong: 1.5px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-pill: 999px;
+
+  /* ---------- motion ---------- */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long:  420ms;
+
+  /* ---------- z ---------- */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+}
+
+/* Cream surface — the brochure's diagonal panel. Re-points semantic tokens only. */
+.surface-cream {
+  --color-paper:       var(--cream-100);
+  --color-paper-2:     var(--cream-200);
+  --color-paper-3:     var(--cream-300);
+  --color-ink:         var(--navy-700);
+  --color-ink-2:       var(--ink-on-cream-2);
+  --color-muted:       var(--ink-on-cream-2);
+  --color-rule:        var(--cream-300);
+  --color-rule-2:      var(--cream-200);
+  --color-rule-strong: var(--slate-300);
+  --color-accent:      var(--orange-500);
+  --color-accent-text: var(--orange-600);
+  --color-focus:       var(--orange-600);
+  --color-on-solid:    var(--cream-100);
+}

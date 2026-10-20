@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>VISCOVA Technologies</title>
+  <meta name="description" content="VISCOVA Technologies is a technology consultancy from Chennai. We design, build and secure software — and check every release before it ships.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300..700&family=Unbounded:wght@200..700&display=swap">
+  <link rel="stylesheet" href="tokens.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=8">
+  <script>
+    /* Hide load-animated elements only when motion will actually run; fail open after 2.5s. */
+    (function () {
+      var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (still) return;
+      var root = document.documentElement;
+      root.classList.add("js-motion");
+      setTimeout(function () { if (!window.__viscovaMotion) root.classList.remove("js-motion"); }, 2500);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Brand symbols — redrawn from the supplied logo. TODO: swap for the official SVG when available. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="mark" viewBox="440 90 680 555">
+      <path class="mark__v" d="M455 185 L660 185 L718 283 L670 322 L621 236 L551 236 L727 532 L890 343 L970 343 L723 632 Z"/>
+      <path class="mark__tick" d="M676 343 L728 302 L768 358 L1105 103 L880 330 L745 458 Z"/>
+    </symbol>
+    <symbol id="wordmark" viewBox="150 640 1240 165">
+      <g fill="none" stroke="currentColor" stroke-width="25" stroke-linejoin="round">
+        <path d="M173 656 L248 780 L323 656"/>
+        <path d="M399 656 V788"/>
+        <path d="M602 668 H508 Q482 668 482 692 Q482 717 508 717 H570 Q596 717 596 746 Q596 776 570 776 H472"/>
+        <path d="M797 668 H722 Q670 668 670 718 V726 Q670 776 722 776 H797"/>
+        <rect x="849" y="668" width="138" height="108" rx="44"/>
+        <path d="M1034 656 L1110 780 L1187 656"/>
+        <path d="M1199 788 L1281 670 L1364 788"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- N5 · Floating pill — Previous nav: none (first Hallmark run). This build: N5, the genre default, because the hero's navy-on-navy surface carries the blur. -->
+  <header class="nav" data-nav>
+    <nav class="nav__pill" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="VISCOVA Technologies, home">
+        <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
+        <svg class="brand__word" aria-hidden="true"><use href="#wordmark"/></svg>
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#practice">Practice</a></li>
+        <li><a href="#lab">Lab</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+      <a class="btn btn--solid btn--sm" href="#book">Book a call</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-nav-toggle>
+        <span class="visually-hidden">Menu</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 7h14M3 13h14"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero · H9 custom illustration centerpiece (Tier B hand-built SVG, load-drawn) -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span data-load="line">Build smart.</span></span>
+          <span class="line"><span data-load="line" class="hero__strong">Ship safe.</span></span>
+        </h1>
+        <p class="hero__lede" data-load="fade">
+          VISCOVA is a technology consultancy from Chennai. We design, build and secure software for founders and growing teams — and we check every release before it reaches your users.
+        </p>
+        <div class="hero__actions" data-load="fade">
+          <a class="btn btn--solid" href="#book">Book a consultation</a>
+          <a class="btn btn--line" href="#lab">Run a free scan <span class="tag tag--quiet">Soon</span></a>
+        </div>
+      </div>
+
+      <figure class="hero__art" aria-hidden="true">
+        <svg viewBox="420 70 720 600" class="hero-mark" data-hero-mark>
+          <defs>
+            <mask id="tick-check" maskUnits="userSpaceOnUse" x="420" y="70" width="720" height="600">
+              <path class="hero-mark__check" data-check pathLength="1000" d="M686 297 L756 408 L1122 88"/>
+            </mask>
+          </defs>
+          <path class="hero-mark__v" pathLength="1000" d="M455 185 L660 185 L718 283 L670 322 L621 236 L551 236 L727 532 L890 343 L970 343 L723 632 Z"/>
+          <g mask="url(#tick-check)">
+            <path class="hero-mark__tick" data-tick d="M676 343 L728 302 L768 358 L1105 103 L880 330 L745 458 Z"/>
+          </g>
+        </svg>
+      </figure>
+
+      <dl class="hero__facts" data-load="fade">
+        <div><dt>Practice</dt><dd>Product engineering · AI · Cloud · Security</dd></div>
+        <div><dt>Based in</dt><dd>VIT Chennai, India</dd></div>
+        <div><dt>Stage</dt><dd>Incubated with V-NEST</dd></div>
+      </dl>
+    </section>
+
+    <!-- Map / Diagram · the five-station loop. Pinned + scrubbed on desktop; a static drawn map + list elsewhere. -->
+    <div class="map-wrap">
+    <section class="map" id="approach" aria-labelledby="map-title" data-map>
+      <div class="map__inner">
+        <div class="map__text">
+          <h2 class="section-title" id="map-title">Idea to production, then watched.</h2>
+          <p class="map__lede">Every engagement runs the same loop. Five stations, one accountable team — and the loop doesn't stop at launch.</p>
+
+          <div class="steps__meter" aria-hidden="true"><span data-meter></span></div>
+          <ol class="steps" data-steps>
+            <li class="step" data-step>
+              <h3 class="step__title"><span class="step__no">01</span> Architect</h3>
+              <p>We start with the system, not the screens. Requirements, data model, threat model and a build plan you can hold us to.</p>
+              <p class="step__out">Architecture brief · threat model · roadmap</p>
+            </li>
+            <li class="step" data-step>
+              <h3 class="step__title"><span class="step__no">02</span> Build</h3>
+              <p>Product engineering across web, mobile and AI features. Typed, tested, reviewed — written to be handed over, not held hostage.</p>
+              <p class="step__out">Production code · test suite · docs</p>
+            </li>
+            <li class="step" data-step>
+              <h3 class="step__title"><span class="step__no">03</span> Secure</h3>
+              <p>Every change is checked before it ships. Deterministic checks, evidence behind every finding, fixes verified by a re-scan.</p>
+              <p class="step__out">Evidence ledger · verified fixes</p>
+            </li>
+            <li class="step" data-step>
+              <h3 class="step__title"><span class="step__no">04</span> Deploy</h3>
+              <p>Cloud and CI/CD with hardened defaults. Infrastructure as code, so every environment can be rebuilt from scratch.</p>
+              <p class="step__out">Pipelines · infrastructure as code · runbooks</p>
+            </li>
+            <li class="step" data-step>
+              <h3 class="step__title"><span class="step__no">05</span> Watch</h3>
+              <p>Software changes, and so does its risk. Every deploy re-runs the loop, and a new hole raises an alert instantly.</p>
+              <p class="step__out">Monitoring · alerts · posture reports</p>
+            </li>
+          </ol>
+        </div>
+
+        <figure class="map__figure">
+          <svg viewBox="0 0 800 800" class="map-scan" aria-hidden="true" focusable="false">
+            <defs>
+              <pattern id="scan-dots" width="16" height="16" patternUnits="userSpaceOnUse">
+                <circle cx="8" cy="8" r="1.7" class="map-dot--lit"/>
+              </pattern>
+              <radialGradient id="scan-fade" cx="50%" cy="50%" r="50%">
+                <stop offset="0.5" class="mask-on"/>
+                <stop offset="1" class="mask-on" stop-opacity="0"/>
+              </radialGradient>
+              <mask id="scan-fade-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="800" height="800">
+                <rect width="800" height="800" fill="url(#scan-fade)"/>
+              </mask>
+            </defs>
+            <rect width="800" height="800" fill="url(#scan-dots)" mask="url(#scan-fade-mask)"/>
+          </svg>
+          <svg viewBox="0 0 800 800" class="system-map" role="img" aria-labelledby="map-svg-title map-svg-desc">
+            <title id="map-svg-title">The VISCOVA loop</title>
+            <desc id="map-svg-desc">A circular system map. Your product sits at the centre; five stations — Architect, Build, Secure, Deploy, Watch — sit on a ring around it, joined clockwise so Watch leads back to Architect.</desc>
+            <defs>
+              <pattern id="dotgrid" width="16" height="16" patternUnits="userSpaceOnUse">
+                <circle cx="8" cy="8" r="1.05" class="map-dot"/>
+              </pattern>
+              <radialGradient id="map-fade" cx="50%" cy="50%" r="50%">
+                <stop offset="0.5" class="mask-on"/>
+                <stop offset="1" class="mask-on" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0" class="glow-stop" stop-opacity="0.28"/>
+                <stop offset="0.6" class="glow-stop" stop-opacity="0.07"/>
+                <stop offset="1" class="glow-stop" stop-opacity="0"/>
+              </radialGradient>
+              <mask id="map-fade-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="800" height="800">
+                <rect width="800" height="800" fill="url(#map-fade)"/>
+              </mask>
+            </defs>
+
+            <g mask="url(#map-fade-mask)">
+              <rect width="800" height="800" fill="url(#dotgrid)"/>
+            </g>
+
+            <g data-dial>
+              <circle cx="400" cy="400" r="344" class="map-dial"/>
+              <circle cx="400" cy="400" r="330" class="map-dial-rim"/>
+            </g>
+            <circle cx="400" cy="400" r="260" class="map-track"/>
+
+            <g class="map-spokes">
+              <line x1="400" y1="400" x2="400" y2="140"/>
+              <line x1="400" y1="400" x2="647.3" y2="319.7"/>
+              <line x1="400" y1="400" x2="552.8" y2="610.3"/>
+              <line x1="400" y1="400" x2="247.2" y2="610.3"/>
+              <line x1="400" y1="400" x2="152.7" y2="319.7"/>
+            </g>
+
+            <circle cx="400" cy="400" r="260" class="map-ring" data-ring pathLength="1000" transform="rotate(-90 400 400)"/>
+            <g class="map-head" data-head>
+              <circle cx="400" cy="140" r="15" class="map-head__ring"/>
+              <circle cx="400" cy="140" r="6.5" class="map-head__dot"/>
+            </g>
+
+            <g class="reactor" data-core>
+              <circle cx="400" cy="400" r="112" class="reactor__halo" data-core-halo/>
+              <circle cx="400" cy="400" r="98" class="reactor__disc"/>
+              <circle cx="400" cy="400" r="90" fill="url(#core-glow)" data-reactor-glow/>
+              <circle cx="400" cy="400" r="87" class="reactor__ring-a" data-ring-a/>
+              <circle cx="400" cy="400" r="75" class="reactor__ring-b" data-ring-b/>
+              <circle cx="400" cy="400" r="62" class="reactor__coils" data-ring-c/>
+              <circle cx="400" cy="400" r="47" class="reactor__inner"/>
+              <use href="#mark" x="370" y="375" width="60" height="49" class="reactor__mark"/>
+            </g>
+            <text x="400" y="538" class="map-label">YOUR PRODUCT</text>
+
+            <g class="map-nodes">
+              <g class="map-node" data-node transform="translate(400 140)">
+                <rect x="-125" y="-34" width="250" height="68" rx="34" class="map-node__body"/>
+                <rect x="-125" y="-34" width="250" height="68" rx="34" class="map-node__halo" data-node-halo/>
+                <text x="-100" y="7" class="map-node__no">01</text>
+                <text x="-64" y="9" class="map-node__name">Architect</text>
+              </g>
+              <g class="map-node" data-node transform="translate(647.3 319.7)">
+                <rect x="-125" y="-34" width="250" height="68" rx="34" class="map-node__body"/>
+                <rect x="-125" y="-34" width="250" height="68" rx="34" class="map-node__halo" data-node-halo/>
+                <text x="-100" y="7" class="map-node__no">02</text>
+                <text x="-64" y="9" class="map-node__name">Build</text>
+              </g>
+              <g class="map-node" data-node transform="translate(552.8 610.3)">
+                <rect x="-125" y="-34" width="250" height="68" rx="34" class="map-node__body"/>
+                <rect x="-125" y="-34" width="250" height="68" rx="34" class="map-node__halo" data-node-halo/>
+                <text x="-100" y="7" class="map-node__no">03</text>
+                <text x="-64" y="9" class="map-node__name">Secure</text>
+              </g>
+              <g class="map-node" data-node transform="translate(247.2 610.3)">
+                <rect x="-125" y="-34" width="250" height="68" rx="34" class="map-node__body"/>
+                <rect x="-125" y="-34" width="250" height="68" rx="34" class="map-node__halo" data-node-halo/>
+                <text x="-100" y="7" class="map-node__no">04</text>
+                <text x="-64" y="9" class="map-node__name">Deploy</text>
+              </g>
+              <g class="map-node" data-node transform="translate(152.7 319.7)">
+                <rect x="-125" y="-34" width="250" height="68" rx="34" class="map-node__body"/>
+                <rect x="-125" y="-34" width="250" height="68" rx="34" class="map-node__halo" data-node-halo/>
+                <text x="-100" y="7" class="map-node__no">05</text>
+                <text x="-64" y="9" class="map-node__name">Watch</text>
+              </g>
+            </g>
+          </svg>
+        </figure>
+      </div>
+    </section>
+    </div>
+
+    <!-- Practice · F3 tabular spec sheet (columns=3, rules=every row) -->
+    <section class="practice" id="practice" aria-labelledby="practice-title">
+      <div class="practice__head">
+        <h2 class="section-title" id="practice-title">What we take on.</h2>
+        <p>A general engineering practice with a security spine. Pick one discipline or hand us the whole loop.</p>
+      </div>
+      <table class="spec">
+        <caption class="visually-hidden">Disciplines, scope and the standard we hold each to</caption>
+        <thead>
+          <tr><th scope="col">Discipline</th><th scope="col">Scope</th><th scope="col">Standard</th></tr>
+        </thead>
+        <tbody>
+          <tr data-reveal><th scope="row">Product engineering</th><td>Web platforms, mobile apps, internal tools, APIs</td><td>Prototype to production, one codebase</td></tr>
+          <tr data-reveal><th scope="row">AI integration</th><td>LLM features, retrieval, agents and evaluation harnesses</td><td>Judged on measured output, not demos</td></tr>
+          <tr data-reveal><th scope="row">Cloud &amp; DevOps</th><td>AWS, GCP and Azure; CI/CD; infrastructure as code</td><td>Hardened defaults from day one</td></tr>
+          <tr data-reveal><th scope="row">Security &amp; audits</th><td>Application reviews, pen-test readiness, DPDP Act readiness</td><td>Evidence behind every finding</td></tr>
+          <tr data-reveal><th scope="row">Technical advisory</th><td>Architecture reviews, due diligence, fractional CTO</td><td>Plain answers for founders and investors</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Lab · the product gist, kept generic. Free scan + one-click deploy are placeholders. -->
+    <section class="lab" id="lab" aria-labelledby="lab-title">
+      <div class="lab__head">
+        <h2 class="section-title" id="lab-title">Our own product, in the lab.</h2>
+        <p>Alongside client work we're building a security layer for AI-built software. It checks an app before it ships and keeps watching after.</p>
+      </div>
+
+      <div class="lab__grid">
+        <div class="why">
+          <h3 class="why__title">Why it exists</h3>
+          <ul class="figures">
+            <li class="figure" data-reveal>
+              <p class="figure__num"><span data-count="1000">1,000</span><span class="figure__unit">+</span></p>
+              <p>AI-built apps crawled in our research — the large majority carried a real, exploitable flaw.</p>
+            </li>
+            <li class="figure" data-reveal>
+              <p class="figure__num"><span class="figure__unit">₹</span><span data-count="250">250</span><span class="figure__unit">&nbsp;Cr</span></p>
+              <p>Maximum penalty per breach instance under India’s Digital Personal Data Protection Act.</p>
+            </li>
+            <li class="figure" data-reveal>
+              <p class="figure__num"><span data-count="12">12</span><span class="figure__unit">%</span></p>
+              <p>Of founders who’d built with AI had ever checked their app for security.</p>
+            </li>
+          </ul>
+
+          <h3 class="why__title">How it decides</h3>
+          <ul class="principles">
+            <li data-reveal><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5 L6.2 12 L13.5 3.5"/></svg><span>Deterministic verdicts — a model never gets a vote on whether you’re safe.</span></li>
+            <li data-reveal><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5 L6.2 12 L13.5 3.5"/></svg><span>Every finding points to an observable evidence record, never just “trust us”.</span></li>
+            <li data-reveal><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5 L6.2 12 L13.5 3.5"/></svg><span>Fixes are verified by re-scanning, not suggested and forgotten.</span></li>
+            <li data-reveal><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5 L6.2 12 L13.5 3.5"/></svg><span>Re-scans on every deploy — not a one-time report gathering dust.</span></li>
+            <li data-reveal><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5 L6.2 12 L13.5 3.5"/></svg><span>Built for founders with no engineering team, not another developer-only tool.</span></li>
+          </ul>
+          <p class="why__src">Figures from VISCOVA’s research and the Digital Personal Data Protection Act, 2023.</p>
+        </div>
+
+        <div class="modules">
+          <article class="module" aria-labelledby="scan-title" data-reveal>
+            <header class="module__head">
+              <h3 id="scan-title">Free scan</h3>
+              <span class="tag">In development</span>
+            </header>
+            <p>Point it at a live URL and get a colour-coded score with the problem categories it found. No sign-up.</p>
+            <form class="scan" data-scan novalidate>
+              <label class="visually-hidden" for="scan-url">App URL to scan</label>
+              <input id="scan-url" name="url" type="url" inputmode="url" placeholder="https://yourapp.in" autocomplete="url" aria-describedby="scan-status">
+              <button class="btn btn--line" type="submit">Run free scan</button>
+            </form>
+            <p class="module__status" id="scan-status" role="status" aria-live="polite"></p>
+          </article>
+
+          <article class="module" aria-labelledby="deploy-title" data-reveal>
+            <header class="module__head">
+              <h3 id="deploy-title">One-click deploy</h3>
+              <span class="tag">Placeholder</span>
+            </header>
+            <p>Build, secure and deploy in one motion — live with hardened defaults and a verifiable security posture.</p>
+            <ol class="flow" aria-label="Deploy pipeline">
+              <li>Build</li><li>Secure</li><li>Deploy</li>
+            </ol>
+            <!-- TODO: Replace with the deploy console once the feature ships. -->
+            <div class="slot" role="note">Deploy console — arrives after the scan engine</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team · cream diagonal panel (the brochure's signature cut) -->
+    <section class="team surface-cream" id="team" aria-labelledby="team-title">
+      <div class="team__head">
+        <h2 class="section-title" id="team-title">The people who sign off.</h2>
+        <p>A small team by design. Every engagement carries one of these names, and every release has an owner you can call.</p>
+      </div>
+
+      <ul class="people">
+        <li class="person" data-reveal>
+          <!-- TODO: Replace with real portrait of Krish Sharma, target size: 800×1000 -->
+          <div class="person__portrait" role="img" aria-label="Portrait of Krish Sharma — to come"><span>KS</span></div>
+          <h3 class="person__name">Krish Sharma</h3>
+          <p class="person__role">Co-founder &amp; CEO</p>
+          <p class="person__bio">Short bio to be added.</p>
+        </li>
+        <li class="person" data-reveal>
+          <!-- TODO: Replace with real portrait of Arnav Madaan, target size: 800×1000 -->
+          <div class="person__portrait" role="img" aria-label="Portrait of Arnav Madaan — to come"><span>AM</span></div>
+          <h3 class="person__name">Arnav Madaan</h3>
+          <p class="person__role">Co-founder &amp; COO</p>
+          <p class="person__bio">Short bio to be added.</p>
+        </li>
+        <li class="person" data-reveal>
+          <!-- TODO: Replace with real portrait of Kunj Agarwal, target size: 800×1000 -->
+          <div class="person__portrait" role="img" aria-label="Portrait of Kunj Agarwal — to come"><span>KA</span></div>
+          <h3 class="person__name">Kunj Agarwal</h3>
+          <p class="person__role">Co-founder &amp; CTO</p>
+          <p class="person__bio">Short bio to be added.</p>
+        </li>
+        <li class="person" data-reveal>
+          <!-- TODO: Replace with real portrait of Lalitya Dodla, target size: 800×1000 -->
+          <div class="person__portrait" role="img" aria-label="Portrait of Lalitya Dodla — to come"><span>LD</span></div>
+          <h3 class="person__name">Lalitya Dodla</h3>
+          <p class="person__role">Chief Marketing Officer</p>
+          <p class="person__bio">Short bio to be added.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Book · consultation form (composes an email — no backend yet) -->
+    <section class="book" id="book" aria-labelledby="book-title">
+      <div class="book__intro">
+        <h2 class="section-title" id="book-title">Tell us what you're building.</h2>
+        <p>A conversation with a founder, no slides. We'll tell you where the loop starts for you — and what we'd skip.</p>
+        <p class="book__aside">Investors: choose “Investor conversation” below, or write to <a href="mailto:hello@viscova.dev?subject=Investor%20conversation">hello@viscova.dev</a>.</p>
+      </div>
+
+      <form class="form" data-book novalidate>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+          <p class="field__err" id="f-name-err"></p>
+        </div>
+        <div class="field">
+          <label for="f-email">Work email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required aria-describedby="f-email-err">
+          <p class="field__err" id="f-email-err"></p>
+        </div>
+        <div class="field">
+          <label for="f-need">What do you need?</label>
+          <select id="f-need" name="need">
+            <option>Product build</option>
+            <option>AI integration</option>
+            <option>Cloud and DevOps</option>
+            <option>Security review</option>
+            <option>Technical advisory</option>
+            <option>Investor conversation</option>
+          </select>
+        </div>
+        <div class="field field--wide">
+          <label for="f-msg">A line or two about it <span class="field__opt">optional</span></label>
+          <textarea id="f-msg" name="message" rows="3" placeholder="We're a two-person team shipping a Bolt-built MVP next month."></textarea>
+        </div>
+        <div class="form__foot">
+          <button class="btn btn--solid" type="submit">Book a consultation</button>
+          <p class="form__note">Opens your email app with the details filled in.</p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Ft5 · Statement -->
+  <footer class="foot">
+    <p class="foot__line">Checked before it ships. Watched after.</p>
+    <div class="foot__meta">
+      <a class="brand brand--foot" href="#top" aria-label="VISCOVA Technologies, back to top">
+        <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
+        <svg class="brand__word" aria-hidden="true"><use href="#wordmark"/></svg>
+      </a>
+      <p>VISCOVA Technologies Private Limited · VIT Chennai, India</p>
+      <a class="foot__link" href="mailto:hello@viscova.dev">hello@viscova.dev</a>
+      <p>© 2026</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="main.js?v=8" defer></script>
+</body>
+</html>
