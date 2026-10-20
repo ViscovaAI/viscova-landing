@@ -2,6 +2,28 @@
 
 Static landing page for VISCOVA Technologies Private Limited. Plain HTML, CSS and JavaScript — no build step.
 
+> **Not published yet.** This repo is private and GitHub Pages is off.
+
+![Hero — Build smart. Ship safe.](screenshots/01-hero.png)
+
+## Screenshots
+
+**The loop** — pinned while you scroll; the ring draws itself, each station lights up, and the arc-reactor core reacts to scroll speed.
+
+![The five-station loop, mid-animation](screenshots/02-loop.png)
+
+| What we take on | Our own product, in the lab |
+| --- | --- |
+| ![Practice](screenshots/03-practice.png) | ![Lab](screenshots/04-lab.png) |
+
+| Team | Book a consultation |
+| --- | --- |
+| ![Team](screenshots/05-team.png) | ![Book](screenshots/06-book.png) |
+
+| Mobile — hero | Mobile — loop |
+| --- | --- |
+| <img src="screenshots/07-mobile-hero.png" width="300" alt="Mobile hero"> | <img src="screenshots/08-mobile-loop.png" width="300" alt="Mobile loop"> |
+
 ## Run locally
 
 ```bash
@@ -17,6 +39,7 @@ Then open http://localhost:4321. Opening `index.html` directly in a browser also
 - `styles.css` — layout and components
 - `main.js` — GSAP + ScrollTrigger animations, Lenis smooth scroll, form behaviour
 - `assets/viscova-logo.webp` — original logo reference
+- `screenshots/` — the images above
 
 ## Still to fill in
 
