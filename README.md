@@ -2,7 +2,7 @@
 
 Static landing page for VISCOVA Technologies Private Limited. Plain HTML, CSS and JavaScript — no build step.
 
-> **Not published yet.** This repo is private and GitHub Pages is off.
+> **Live:** https://viscovaai.github.io/viscova-landing/ (GitHub Pages, from `main`)
 
 ![Hero — Build smart. Ship safe.](screenshots/01-hero.png)
 
