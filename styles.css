@@ -483,24 +483,24 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: var(--
 .team__head { display: grid; gap: var(--space-md); }
 .team__head p { max-width: 34rem; color: var(--color-ink-2); }
 .people {
-  display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl) var(--space-lg);
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xl) var(--space-md);
   margin-block-start: var(--space-2xl);
 }
 .person { display: grid; gap: var(--space-2xs); align-content: start; }
 .person__portrait {
   position: relative;
   aspect-ratio: 4 / 5;
-  margin-block-end: var(--space-md);
+  margin-block-end: var(--space-sm);
   display: grid; place-items: end start;
-  padding: var(--space-md);
+  padding: clamp(var(--space-sm), 3vw, var(--space-md));
   background-color: var(--color-paper-2);
   border: var(--rule-hair) solid var(--color-rule);
   border-radius: var(--radius-md);
   overflow: hidden;
 }
 .person__portrait::after {
-  content: ""; position: absolute; top: var(--space-md); right: var(--space-md);
-  width: var(--space-lg); height: var(--space-lg);
+  content: ""; position: absolute; top: clamp(var(--space-sm), 3vw, var(--space-md)); right: clamp(var(--space-sm), 3vw, var(--space-md));
+  width: clamp(var(--space-md), 4vw, var(--space-lg)); height: clamp(var(--space-md), 4vw, var(--space-lg));
   border-top: var(--rule-strong) solid var(--color-accent);
   border-right: var(--rule-strong) solid var(--color-accent);
 }
@@ -510,13 +510,13 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: var(--
 .person__portrait span { position: relative; }
 .person__portrait span {
   font-family: var(--font-display); font-weight: var(--weight-display);
-  font-size: clamp(3rem, 8vw, 4.5rem); line-height: 1; letter-spacing: -0.04em;
+  font-size: clamp(2.25rem, 9vw, 4.5rem); line-height: 1; letter-spacing: -0.04em;
   color: var(--color-ink);
 }
-.person__name { font-family: var(--font-display); font-weight: 400; font-size: var(--text-md); letter-spacing: -0.02em; }
+.person__name { font-family: var(--font-display); font-weight: 400; font-size: clamp(1rem, 0.6rem + 1.6vw, 1.25rem); line-height: 1.2; letter-spacing: -0.02em; overflow-wrap: anywhere; }
 .person__role { color: var(--color-accent-text); font-weight: var(--weight-strong); font-size: var(--text-sm); }
 
-@media (min-width: 30rem) { .people { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 40rem) { .people { column-gap: var(--space-lg); row-gap: var(--space-2xl); } }
 @media (min-width: 64rem) {
   .people { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--space-xl); }
   .team__head { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); align-items: end; column-gap: var(--space-2xl); }
